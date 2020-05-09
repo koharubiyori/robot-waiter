@@ -13,6 +13,7 @@ export function relay(message: http.IncomingMessage, response: http.ServerRespon
   proxyServer.web(message, response, {
     target,
     secure: false,
+    prependPath: false,
     changeOrigin: true
   })
 }

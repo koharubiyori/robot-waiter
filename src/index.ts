@@ -5,14 +5,11 @@ import { render } from './modules/render'
 import { getConfig, setConfig, RobotWaiterConfig } from './utils/getConfig'
 
 const actions = { relay, render }
-export type RobotWaiterActionName = keyof typeof actions
 
-export function startRobotWaiterServer(config: RobotWaiterConfig) {
+export = function startRobotWaiterServer(config: RobotWaiterConfig) {
   setConfig(config)
 
   const currentConfig = getConfig()
   const server = http.createServer((message, response) => actions[filter(message)](message, response))
   server.listen(currentConfig.port)
 }
-
-export default startRobotWaiterServer
