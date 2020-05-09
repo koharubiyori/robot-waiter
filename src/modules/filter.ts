@@ -1,6 +1,6 @@
 import http from 'http'
 import { RobotWaiterActionName } from '../index'
-import { getConfig } from '~/utils/getConfig'
+import { getConfig } from '../utils/getConfig'
 
 export function filter(message: http.IncomingMessage): RobotWaiterActionName {
   const config = getConfig()
