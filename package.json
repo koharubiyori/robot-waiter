@@ -1,6 +1,6 @@
 {
   "name": "robot-waiter",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "",
   "main": "dist/index",
   "repository": {
@@ -22,8 +22,5 @@
   "devDependencies": {
     "@types/http-proxy": "^1.17.4",
     "@types/puppeteer": "^2.0.1"
-  },
-  "_moduleAliases": {
-    "~": "./dist"
   }
 }
