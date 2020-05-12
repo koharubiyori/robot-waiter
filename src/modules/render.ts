@@ -1,10 +1,12 @@
 import http from 'http'
 import puppeteer from 'puppeteer'
-import path from 'path'
-import { getConfig } from '~/utils/getConfig'
-import { connectUrl } from '~/utils/tools'
+import { getConfig } from '../utils/getConfig'
+import { connectUrl } from '../utils/tools'
 
-const browserPromise = puppeteer.launch()
+const browserPromise = puppeteer.launch({
+  headless: true,
+  args: ['--no-sandbox']
+})
 
 export async function render(message: http.IncomingMessage, response: http.ServerResponse) {
   const config = getConfig()

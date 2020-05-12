@@ -1,4 +1,3 @@
-import 'module-alias/register'
 import http from 'http'
 import { filter } from './modules/filter'
 import { relay } from './modules/relay'
@@ -6,9 +5,8 @@ import { render } from './modules/render'
 import { getConfig, setConfig, RobotWaiterConfig } from './utils/getConfig'
 
 const actions = { relay, render }
-export type RobotWaiterActionName = keyof typeof actions
 
-export default function startRobotWaiterServer(config: RobotWaiterConfig) {
+export = function startRobotWaiterServer(config: RobotWaiterConfig) {
   setConfig(config)
 
   const currentConfig = getConfig()
