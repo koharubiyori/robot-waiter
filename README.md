@@ -46,7 +46,7 @@ interface RobotWaiterConfig {
 - **wait**: 页面从加载开始要等待的时间，单位为毫秒。默认值：3000
 - **filters**: 过滤选项。
     - paths: 由字符串或正则表达式组成的数组，与这些字符串或正则匹配的路径(不包括baseUrl，baseUrl一般等同于传入的targetUrl)，将由robot-waiter返回处理结果。默认值：[]。
-    - userAgent: 由字符串组成的数组，接收到的请求头user-agent字段中包含这些字符串其中之一的，由robot-waiter返回处理结果。默认值：userAgent: [
+    - userAgent: 由字符串组成的数组，接收到的请求头user-agent字段中包含这些字符串其中之一的，由robot-waiter返回处理结果。默认值：[
       'bot', 
       'bing',
       'yandex',
