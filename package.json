@@ -1,7 +1,7 @@
 {
   "name": "robot-waiter",
-  "version": "0.6.5",
-  "description": "",
+  "version": "0.6.8",
+  "description": "不使用服务端渲染框架优化SPA的SEO",
   "main": "dist/index",
   "repository": {
     "type": "git",
