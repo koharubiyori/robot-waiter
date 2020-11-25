@@ -2,7 +2,7 @@
 
 该模块可以使SPA(单页应用)在不使用服务端渲染框架的情况下，使搜索引擎蜘蛛在爬取页面时，返回js执行过后的页面，而在用户访问时则直接原样返回，以此来改善SPA的SEO。
 
-你可以把这个模块当做node.js版本的[rendora](https://github.com/rendora/rendora)，原理也是相同的。
+你可以把这个库当做node.js版本的[rendora](https://github.com/rendora/rendora)，原理也是相同的。
 
 该模块通过运行一个代理服务及无头模式(headless mode)的浏览器，匹配指定的url或user-agent请求头，匹配的url返回无头浏览器加载后的结果。对于不匹配的url，则只是一个透明的代理，不做任何事情。
 
@@ -20,6 +20,8 @@ robot-waiter中使用了[Puppeteer](https://pptr.dev/)，在安装时会同时�
 一些Linux的OS可能会缺少部分依赖库，运行时会报错，请根据错误提示安装对应的依赖库文件。
 
 ## 例子
+一般用法为使用`robotWaiter`代理一个web服务，再用nginx等将域名映射到robotWaiter的代理服务端口。
+
 ``` js
 import robotWaiter from 'robot-waiter'
 // 假设一个SPA跑在http://localhost:8080上
